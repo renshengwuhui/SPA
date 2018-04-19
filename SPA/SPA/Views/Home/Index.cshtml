@@ -1,0 +1,16 @@
+﻿@using SPATest1.Models;
+@model IEnumerable<Reservation>
+@{
+    ViewBag.Title = "Reservations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Body{
+    <div id="summary" class="section panel panel-primary">
+        @Html.Partial("Summary",Model)
+    </div>    
+    <div id="editor" class="section panel panel-primary">
+        @Html.Partial("Editor",new Reservation())
+    </div>
+}
+
